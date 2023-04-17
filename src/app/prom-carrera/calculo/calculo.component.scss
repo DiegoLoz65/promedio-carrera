@@ -1,0 +1,135 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    margin: 28px 0;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  .notas {
+    width: 80%;
+    height: 100%;
+    border-radius: 12px;
+    box-shadow: 0px 0px 5px rgb(183, 183, 183);
+    padding: 20px;
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 12px;
+      p {
+        font-size: 0.9rem;
+        width: 100%;
+      }
+      button {
+        height: 30px;
+        font-family: 'Inter';
+        font-size: 1rem;
+        font-weight: 500;
+        border: none;
+        border-radius: 5px;
+        color: azure;
+        background-color: #2f3030;
+        transition: all 0.2s ease-out;
+        box-shadow: 0px 0px 5px rgb(183, 183, 183);
+      }
+      button:hover {
+        background-color: rgb(226, 226, 226);
+        color: #2f3030;
+        transition: all 0.2s ease-out;
+        cursor: pointer;
+      }
+    }
+    .nota_semestre {
+      margin: 18px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      input[type=number]::-webkit-inner-spin-button,
+      input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input {
+        width: 3rem;
+        height: 26px;
+        border-radius: 5px;
+        border: 1px solid #b1b1b1;
+        text-align: center;
+      }
+      input:focus {
+        border: 1px solid #e22626;
+        box-shadow: 0px 0px 5px rgb(183, 183, 183);
+      }
+
+    }
+    .nota_semestre.titulos p{
+      font-weight: 600;
+    }
+    .botones {
+      display: flex;
+      justify-content: end;
+      button {
+        height: 30px;
+        width: 136px;
+        font-family: 'Inter';
+        font-size: 1rem;
+        font-weight: 500;
+        border: none;
+        border-radius: 5px;
+        color: azure;
+        background-color: #276219;
+        transition: all 0.2s ease-out;
+        box-shadow: 0px 0px 5px rgb(183, 183, 183);
+      }
+      button:hover {
+        background-color: rgb(226, 226, 226);
+        color: #2f3030;
+        transition: all 0.2s ease-out;
+        cursor: pointer;
+      }
+    }
+    .resultado {
+      display: none;
+      margin-top: 18px;
+      text-align: center;
+      .prom {
+        margin-top: 8px;
+        font-size: 3rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+}
+
+@media only screen and (min-width: 600px) {
+  .nota_semestre {
+      justify-content: space-around !important;
+
+      input {
+        width: 5rem !important;
+      }
+  }
+  .info {
+    flex-direction: row !important;
+    button {
+      height: 3rem !important;
+    }
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  .notas {
+    width: 780px !important;
+  }
+  .info {
+    p {
+      width: 80% !important;
+    }
+  }
+}
